@@ -1,6 +1,12 @@
-enum ProjectServicePath {
-  login("api/login");
+enum ProjectNetworkPath {
+  login("api/login"),
+  users("/api/users?page="),
+  ;
 
   final String path;
-  const ProjectServicePath(this.path);
+  const ProjectNetworkPath(this.path);
+
+  String withQuery(String value) {
+    return '$path/$value';
+  }
 }

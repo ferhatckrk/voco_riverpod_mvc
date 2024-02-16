@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:voco_riverpod_mvc/features/auth/login/controller/login_controller.dart';
 import 'package:voco_riverpod_mvc/features/auth/login/view/mixin/login_view_mixin.dart';
+import 'package:voco_riverpod_mvc/product/provider/providers.dart';
 import 'package:voco_riverpod_mvc/product/utilities/enum/project_enums.dart';
 import 'package:voco_riverpod_mvc/product/widget/button/project_button.dart';
 import 'package:voco_riverpod_mvc/product/widget/component/project_component.dart';
@@ -36,11 +36,11 @@ class _LoginViewState extends ConsumerState<LoginView> with LoginViewMixin {
                     children: [
                       addSpaceVertical(size.height * .3),
                       ProjectTextField(
-                          controller: emailController, hintText: "Email"),
+                          controller: emailController, hintText: "Enter Your Email"),
                       addSpaceVertical(size.height * .01),
                       ProjectTextField(
                           controller: passwordController,
-                          hintText: "Password ",
+                          hintText: "Enter Your Password",
                           isPassword: true),
                       const Spacer(),
                       ProjectButton(

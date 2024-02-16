@@ -9,7 +9,7 @@ part 'project_router.gr.dart';
 final class ProjectRouter extends _$ProjectRouter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: LoginRoute.page, initial: true),
-        AutoRoute(page: ParticipantsRoute.page),
+        AutoRoute(page: LoginRoute.page),
+        AutoRoute(page: ParticipantsRoute.page, initial: true),
       ];
 }

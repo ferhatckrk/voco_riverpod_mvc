@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:voco_riverpod_mvc/product/init/application_initialize.dart';
 import 'package:voco_riverpod_mvc/product/navigation/project_router.dart';
-import 'package:voco_riverpod_mvc/product/theme/project_theme.dart';
+import 'package:voco_riverpod_mvc/product/init/theme/project_theme.dart';
 
 Future<void> main() async {
   /// Start platform API's

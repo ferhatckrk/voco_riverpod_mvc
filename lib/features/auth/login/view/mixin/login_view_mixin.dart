@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:voco_riverpod_mvc/features/auth/login/controller/login_controller.dart';
 import 'package:voco_riverpod_mvc/features/auth/login/view/login_view.dart';
-import 'package:auto_route/auto_route.dart';
-import 'package:voco_riverpod_mvc/product/navigation/project_router.dart';
+import 'package:voco_riverpod_mvc/product/provider/providers.dart';
 
 mixin LoginViewMixin on ConsumerState<LoginView> {
   late TextEditingController emailController;

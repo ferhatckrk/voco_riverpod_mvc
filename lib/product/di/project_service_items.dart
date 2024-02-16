@@ -1,6 +1,7 @@
 import 'package:voco_riverpod_mvc/product/network/project_network_manager.dart';
 import 'package:voco_riverpod_mvc/product/repository/local/local_storage_token.dart';
 import 'package:voco_riverpod_mvc/product/repository/remote/auth/auth_repository.dart';
+import 'package:voco_riverpod_mvc/product/repository/remote/home/user_repository.dart';
 
 import 'project_service_locater.dart';
 
@@ -19,4 +20,8 @@ class ProjectServiceItems {
 
   static LocalStorageToken get tokenLocalStorage =>
       ServiceLocater.read<LocalStorageToken>();
+
+  // User Repository
+  static UserRepository get userRepository =>
+      ServiceLocater.read<UserRepository>();
 }

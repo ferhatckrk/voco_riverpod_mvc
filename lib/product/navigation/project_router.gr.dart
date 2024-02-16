@@ -24,7 +24,7 @@ abstract class _$ProjectRouter extends RootStackRouter {
     ParticipantsRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const ParticipantsView(),
+        child:   ParticipantsView(),
       );
     },
   };

@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:voco_riverpod_mvc/product/model/auth/login/login_request_model.dart';
 import 'package:voco_riverpod_mvc/product/model/auth/token/token_model.dart';
 import 'package:voco_riverpod_mvc/product/model/error/service_error.dart';
- import 'package:voco_riverpod_mvc/product/network/project_service_path.dart';
+import 'package:voco_riverpod_mvc/product/network/project_service_path.dart';
 
 abstract class IAuthRepository {
   Future<Either<ServiceError, TokenModel>> login(
@@ -20,7 +20,7 @@ class AuthRepository implements IAuthRepository {
   Future<Either<ServiceError, TokenModel>> login(
       LoginRequestModel loginRequestModel) async {
     try {
-      final response = await _networkManager.post(ProjectServicePath.login.path,
+      final response = await _networkManager.post(ProjectNetworkPath.login.path,
           data: loginRequestModel.toJson());
 
       if (response.statusCode == HttpStatus.ok) {
