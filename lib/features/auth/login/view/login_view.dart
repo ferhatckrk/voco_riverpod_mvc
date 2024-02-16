@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:voco_riverpod_mvc/features/auth/login/view/mixin/login_view_mixin.dart';
@@ -8,8 +7,8 @@ import 'package:voco_riverpod_mvc/product/widget/button/project_button.dart';
 import 'package:voco_riverpod_mvc/product/widget/component/project_component.dart';
 import 'package:voco_riverpod_mvc/product/widget/textfield/project_textfield.dart';
 
-@RoutePage()
 class LoginView extends ConsumerStatefulWidget {
+  static const String routeName = "/login-view";
   const LoginView({super.key});
 
   @override
@@ -36,7 +35,8 @@ class _LoginViewState extends ConsumerState<LoginView> with LoginViewMixin {
                     children: [
                       addSpaceVertical(size.height * .3),
                       ProjectTextField(
-                          controller: emailController, hintText: "Enter Your Email"),
+                          controller: emailController,
+                          hintText: "Enter Your Email"),
                       addSpaceVertical(size.height * .01),
                       ProjectTextField(
                           controller: passwordController,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:voco_riverpod_mvc/features/auth/login/controller/mixin/login_controller_mixin.dart';
+import 'package:voco_riverpod_mvc/features/home/participants/view/participants_view.dart';
 import 'package:voco_riverpod_mvc/product/model/auth/login/login_request_model.dart';
 import 'package:voco_riverpod_mvc/product/repository/local/local_storage_token.dart';
 import 'package:voco_riverpod_mvc/product/repository/remote/auth/auth_repository.dart';
 import 'package:voco_riverpod_mvc/product/widget/snack_bar/project_snackbar.dart';
-import 'package:auto_route/auto_route.dart';
 
 import '../../../../product/model/auth/token/token_model.dart';
 import '../../../../product/navigation/project_router.dart';
@@ -59,5 +59,5 @@ class LoginController extends StateNotifier<ProjectState>
 }
 
 _navigateToParticipantsView(BuildContext context) {
-  context.router.push(const ParticipantsRoute());
+  Navigator.pushReplacementNamed(context, ParticipantsView.routeName);
 }
