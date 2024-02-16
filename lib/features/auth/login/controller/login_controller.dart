@@ -8,8 +8,7 @@ import 'package:voco_riverpod_mvc/product/repository/remote/auth/auth_repository
 import 'package:voco_riverpod_mvc/product/widget/snack_bar/project_snackbar.dart';
 
 import '../../../../product/model/auth/token/token_model.dart';
-import '../../../../product/navigation/project_router.dart';
-import '../../../../product/utilities/enum/project_enums.dart';
+ import '../../../../product/utilities/enum/project_enums.dart';
 
 class LoginController extends StateNotifier<ProjectState>
     with LoginControllerMixin {
